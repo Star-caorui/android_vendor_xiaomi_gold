@@ -29,10 +29,9 @@ SHA-256 35c9f1d98b28538ac10c319ad4cba993cd5a632960d9111162e3efa494dae5c9
 | Commit | What it does |
 | --- | --- |
 | The first | Imports the files exactly as the package has them, at the same paths |
-| Each one after it | Makes one change to some of them. Its message says what was done and with which command |
-| The last | Adds the build files that `extract-files.py` generates |
+| Each one after it | Makes one change to some of them, or adds or regenerates the build files that `extract-files.py` writes. Its message says what was done and with which command |
 
-So `git log` is the complete list of differences from stock. The history is rebuilt whenever the list of files or a change is altered, so commit ids do not last.
+So `git log` is the complete list of differences from stock.
 
 ## Verifying
 
