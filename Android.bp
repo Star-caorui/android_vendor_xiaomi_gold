@@ -38404,6 +38404,14 @@ cc_prebuilt_binary {
     soc_specific: true,
 }
 
+sh_binary {
+    name: "init.insmod",
+    owner: "xiaomi",
+    src: "proprietary/vendor/bin/init.insmod.sh",
+    filename: "init.insmod.sh",
+    soc_specific: true,
+}
+
 cc_prebuilt_binary {
     name: "ipsec_mon",
     owner: "xiaomi",
