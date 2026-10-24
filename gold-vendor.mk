@@ -516,6 +516,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/gold/proprietary/vendor/etc/camera/xiaomi/superlowlightsnapshot.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/xiaomi/superlowlightsnapshot.json \
     vendor/xiaomi/gold/proprietary/vendor/etc/camera/xiaomi/thirdpartysnapshot.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/xiaomi/thirdpartysnapshot.json \
     vendor/xiaomi/gold/proprietary/vendor/etc/camera/xiaomi/uwsuperlowlightshot.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/xiaomi/uwsuperlowlightshot.json \
+    vendor/xiaomi/gold/proprietary/vendor/etc/dolby/dax-default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-default.xml \
     vendor/xiaomi/gold/proprietary/vendor/etc/ecc_list.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ecc_list.xml \
     vendor/xiaomi/gold/proprietary/vendor/etc/ecc_list_OP01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ecc_list_OP01.xml \
     vendor/xiaomi/gold/proprietary/vendor/etc/ecc_list_OP02.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ecc_list_OP02.xml \
@@ -562,6 +563,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/gold/proprietary/vendor/etc/init/android.hardware.security.keymint.mitee@3.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.security.keymint.mitee@3.0-service.rc \
     vendor/xiaomi/gold/proprietary/vendor/etc/init/camerahalserver.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/camerahalserver.rc \
     vendor/xiaomi/gold/proprietary/vendor/etc/init/display.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/display.rc \
+    vendor/xiaomi/gold/proprietary/vendor/etc/init/dms-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dms-service.rc \
     vendor/xiaomi/gold/proprietary/vendor/etc/init/fuelgauged_init.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/fuelgauged_init.rc \
     vendor/xiaomi/gold/proprietary/vendor/etc/init/fuelgauged_nvram_init.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/fuelgauged_nvram_init.rc \
     vendor/xiaomi/gold/proprietary/vendor/etc/init/gsm0710muxd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/gsm0710muxd.rc \
@@ -577,6 +579,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/gold/proprietary/vendor/etc/init/nvram_daemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/nvram_daemon.rc \
     vendor/xiaomi/gold/proprietary/vendor/etc/init/tee-supplicant.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/tee-supplicant.rc \
     vendor/xiaomi/gold/proprietary/vendor/etc/init/v3avpud.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/v3avpud.rc \
+    vendor/xiaomi/gold/proprietary/vendor/etc/init/vendor.dolby.media.c2-default-service-dax.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.dolby.media.c2-default-service-dax.rc \
     vendor/xiaomi/gold/proprietary/vendor/etc/init/vendor.mediatek.hardware.mms-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.mediatek.hardware.mms-service.rc \
     vendor/xiaomi/gold/proprietary/vendor/etc/init/vendor.mediatek.hardware.pq_aidl-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.mediatek.hardware.pq_aidl-service.rc \
     vendor/xiaomi/gold/proprietary/vendor/etc/le_audio_codec_capabilities.xml:$(TARGET_COPY_OUT_VENDOR)/etc/le_audio_codec_capabilities.xml \
@@ -935,6 +938,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/gold/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_8.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_8.mcfopota \
     vendor/xiaomi/gold/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_9.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_9.mcfopota \
     vendor/xiaomi/gold/proprietary/vendor/etc/mdota/MTK_OTA.mcfota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OTA.mcfota \
+    vendor/xiaomi/gold/proprietary/vendor/etc/media_codecs_dolby_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_dolby_audio.xml \
     vendor/xiaomi/gold/proprietary/vendor/etc/misound_res.bin:$(TARGET_COPY_OUT_VENDOR)/etc/misound_res.bin \
     vendor/xiaomi/gold/proprietary/vendor/etc/misound_res_headphone.bin:$(TARGET_COPY_OUT_VENDOR)/etc/misound_res_headphone.bin \
     vendor/xiaomi/gold/proprietary/vendor/etc/misound_res_spk.bin:$(TARGET_COPY_OUT_VENDOR)/etc/misound_res_spk.bin \
@@ -2015,7 +2019,10 @@ PRODUCT_PACKAGES += \
     libcodec2_mtk_c2store \
     libcodec2_mtk_vdec \
     libcodec2_mtk_venc \
+    libcodec2_soft_ac4dec \
     libcodec2_soft_common-v35 \
+    libcodec2_soft_ddpdec \
+    libcodec2_store_dolby \
     libcodec2_vndk-v35 \
     libcodec2_vpp_fa_plugin \
     libcodec2_vpp_mi_plugin \
@@ -2027,8 +2034,13 @@ PRODUCT_PACKAGES += \
     libconnfem \
     libcustom_nvram \
     libcvsd_mtk \
+    libdapparamstorage \
+    libdeccfg \
     libdip_drv \
     libdip_postproc \
+    libdlbdsservice \
+    libdlbpreg \
+    libdmshal \
     libeffecthal.base \
     libfeature.face \
     libfeature.stereo.provider \
@@ -2277,6 +2289,10 @@ PRODUCT_PACKAGES += \
     sc202pcs_sunny_macro_mipi_raw_IdxMgr \
     sc202pcs_sunny_macro_mipi_raw_tuning \
     sensors.touch.detect \
+    libdlbvolaidl \
+    libswdapaidl \
+    vendor.dolby.dms-V1-ndk \
+    vendor.dolby.hardware.dms@2.0 \
     vendor.mediatek.hardware.apuware.utils-V1-ndk \
     vendor.mediatek.hardware.camera.atms-V1-ndk \
     vendor.mediatek.hardware.camera.bgservice-V1-ndk \
@@ -2361,6 +2377,7 @@ PRODUCT_PACKAGES += \
     android.hardware.security.secureclock-service.mitee.xml \
     android.hardware.security.sharedsecret-service.mitee.xml \
     bluetooth_audio_mtk.xml \
+    dms-service.xml \
     gnss-aosp-mtk.xml \
     gnss-mtk.xml \
     manifest_allocator.xml \
@@ -2368,6 +2385,7 @@ PRODUCT_PACKAGES += \
     manifest_hwcomposer.xml \
     manifest_media_c2_default.xml \
     mapper.mediatek.xml \
+    vendor.dolby.media.c2-default-service-dax.xml \
     manifest_iron_gl.xml \
     manifest_iron_p_gl.xml \
     batterysecret \
@@ -2388,6 +2406,8 @@ PRODUCT_PACKAGES += \
     android.hardware.security.keymint@3.0-service.mitee \
     camerahalserver \
     mtkfusionrild \
+    vendor.dolby.dms.service \
+    vendor.dolby.media.c2-default-service-dax \
     vendor.mediatek.hardware.mms-service \
     vendor.mediatek.hardware.pq_aidl-service \
     vtservice_aidl \
