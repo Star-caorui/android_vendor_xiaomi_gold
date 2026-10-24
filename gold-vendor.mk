@@ -2350,6 +2350,7 @@ PRODUCT_PACKAGES += \
     mediatek-telephony-base \
     com.android.hotwordenrollment.common.util \
     mediatek-ims-extension-plugin \
+    CommandService.xml \
     android.hardware.audio.effect.service-aidl.xml \
     android.hardware.audio.service-aidl.mediatek.xml \
     android.hardware.gatekeeper-service.mitee.xml \

@@ -37494,6 +37494,15 @@ dex_import {
 }
 
 prebuilt_etc_xml {
+    name: "CommandService.xml",
+    owner: "xiaomi",
+    src: "proprietary/vendor/etc/vintf/manifest/CommandService.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
+}
+
+prebuilt_etc_xml {
     name: "android.hardware.audio.effect.service-aidl.xml",
     owner: "xiaomi",
     src: "proprietary/vendor/etc/vintf/manifest/android.hardware.audio.effect.service-aidl.xml",
