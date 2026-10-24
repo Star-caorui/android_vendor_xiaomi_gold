@@ -17,10 +17,12 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/gold/proprietary/odm/etc/permissions/sku_iron_gl/android.hardware.nfc.hcef.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_iron_gl/android.hardware.nfc.hcef.xml \
     vendor/xiaomi/gold/proprietary/odm/etc/permissions/sku_iron_gl/android.hardware.nfc.uicc.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_iron_gl/android.hardware.nfc.uicc.xml \
     vendor/xiaomi/gold/proprietary/odm/etc/permissions/sku_iron_gl/android.hardware.nfc.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_iron_gl/android.hardware.nfc.xml \
+    vendor/xiaomi/gold/proprietary/odm/etc/permissions/sku_iron_gl/android.hardware.se.omapi.uicc.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_iron_gl/android.hardware.se.omapi.uicc.xml \
     vendor/xiaomi/gold/proprietary/odm/etc/permissions/sku_iron_p_gl/android.hardware.nfc.hce.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_iron_p_gl/android.hardware.nfc.hce.xml \
     vendor/xiaomi/gold/proprietary/odm/etc/permissions/sku_iron_p_gl/android.hardware.nfc.hcef.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_iron_p_gl/android.hardware.nfc.hcef.xml \
     vendor/xiaomi/gold/proprietary/odm/etc/permissions/sku_iron_p_gl/android.hardware.nfc.uicc.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_iron_p_gl/android.hardware.nfc.uicc.xml \
     vendor/xiaomi/gold/proprietary/odm/etc/permissions/sku_iron_p_gl/android.hardware.nfc.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_iron_p_gl/android.hardware.nfc.xml \
+    vendor/xiaomi/gold/proprietary/odm/etc/permissions/sku_iron_p_gl/android.hardware.se.omapi.uicc.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_iron_p_gl/android.hardware.se.omapi.uicc.xml \
     vendor/xiaomi/gold/proprietary/system_ext/etc/init/init.vtservice.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.vtservice.rc \
     vendor/xiaomi/gold/proprietary/system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.android.hotwordenrollment.common.util.xml \
     vendor/xiaomi/gold/proprietary/vendor/etc/MNL_Config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/MNL_Config.xml \
