@@ -516,6 +516,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/gold/proprietary/vendor/etc/camera/xiaomi/superlowlightsnapshot.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/xiaomi/superlowlightsnapshot.json \
     vendor/xiaomi/gold/proprietary/vendor/etc/camera/xiaomi/thirdpartysnapshot.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/xiaomi/thirdpartysnapshot.json \
     vendor/xiaomi/gold/proprietary/vendor/etc/camera/xiaomi/uwsuperlowlightshot.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/xiaomi/uwsuperlowlightshot.json \
+    vendor/xiaomi/gold/proprietary/vendor/etc/dolby/dax-default-spatializer.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-default-spatializer.xml \
     vendor/xiaomi/gold/proprietary/vendor/etc/dolby/dax-default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-default.xml \
     vendor/xiaomi/gold/proprietary/vendor/etc/ecc_list.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ecc_list.xml \
     vendor/xiaomi/gold/proprietary/vendor/etc/ecc_list_OP01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ecc_list_OP01.xml \
@@ -2205,6 +2206,7 @@ PRODUCT_PACKAGES += \
     libsensor_custom \
     libsfplugin_ccodec_utils-v35 \
     libsilkybrightnesscore \
+    libspatializerparamstorage \
     libspeech_enh_lib \
     libspeechparser_vendor \
     libstagefright_aidl_bufferpool2-v35 \
@@ -2291,6 +2293,7 @@ PRODUCT_PACKAGES += \
     sensors.touch.detect \
     libdlbvolaidl \
     libswdapaidl \
+    libswspatializeraidl \
     vendor.dolby.dms-V1-ndk \
     vendor.dolby.hardware.dms@2.0 \
     vendor.mediatek.hardware.apuware.utils-V1-ndk \
