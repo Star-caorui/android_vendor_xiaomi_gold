@@ -46,7 +46,7 @@ git checkout $(git rev-list --max-parents=0 HEAD)
 mkdir -p work/img
 unzip -o gold_global-ota_full-OS3.0.5.0.VNQMIXM-user-15.0-df9ff3aa93.zip payload.bin -d work
 ota_extractor --payload work/payload.bin --output_dir work/img \
-  --partitions vendor,system_ext,product,dpm,gz,lk,mcupm,md1img,pi_img,scp,spmfw,sspm,tee
+  --partitions vendor,system_ext,product,dpm,gz,lk,mcupm,md1img,pi_img,preloader_raw,scp,spmfw,sspm,tee
 fsck.erofs --extract=work/vendor work/img/vendor.img
 fsck.erofs --extract=work/system_ext work/img/system_ext.img
 fsck.erofs --extract=work/product work/img/product.img
